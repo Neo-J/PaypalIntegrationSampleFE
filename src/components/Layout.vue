@@ -9,7 +9,7 @@
                     <div class="layout-nav">
                         <MenuItem name="1" style="float:right">
                             <Icon type="ios-paper"></Icon>
-                            Item 4
+                            Personal Info
                         </MenuItem>
                     </div>
                 </Menu>
@@ -17,11 +17,9 @@
             <Content :style="{padding: '0 50px'}">
                 <Breadcrumb :style="{margin: '20px 0'}">
                     <BreadcrumbItem>Home</BreadcrumbItem>
-                    <BreadcrumbItem>Components</BreadcrumbItem>
-                    <BreadcrumbItem>Layout</BreadcrumbItem>
+                    <BreadcrumbItem>{{currentRouteName}}</BreadcrumbItem>
                 </Breadcrumb>
                 <router-view></router-view>
-                
                 
             </Content>
             <Footer class="layout-footer-center">2019-2019 &copy; NeoShop</Footer>
@@ -34,7 +32,21 @@
     export default {
         
         data(){
-            return {};
+            return {
+                currentRouteName: ""
+            };
+        },
+
+        methods: {
+            getBreadCrumb() {
+                this.currentRouteName = this.$route.name;
+            }
+        },
+
+        watch: {
+            $route() {
+                this.getBreadCrumb();
+            }
         },
         
         created() {

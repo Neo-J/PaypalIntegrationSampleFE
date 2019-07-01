@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import Layout from '@/components/Layout.vue'
 import ShoppingCart from '@/components/ShoppingCart.vue'
+import Thank from '@/components/Thank.vue'
 
 Vue.use(Router)
 let router = new Router({
@@ -16,6 +17,11 @@ let router = new Router({
         name: 'ShoppingCart',
         component: ShoppingCart
       },
+      {
+        path: 'thank',
+        name: "Thank",
+        component: Thank
+      }
     ]
   }
   ]
