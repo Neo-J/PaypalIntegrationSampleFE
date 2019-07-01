@@ -44,15 +44,14 @@
         },
 
         watch: {
+            // Change the BreadCrumb per route
             $route() {
                 this.getBreadCrumb();
             }
         },
         
         created() {
-            // this.$nextTick(function(){
-            //     paypal.Buttons().render('#paypal-button-container');
-            // })
+            
         }
     }
 </script>

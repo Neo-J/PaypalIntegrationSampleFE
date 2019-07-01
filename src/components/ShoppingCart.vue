@@ -50,6 +50,7 @@ export default {
     data(){
         return {
             buyer_name: "Neo Jiang",
+            // Mock address data
             shipping_address: {
                 //The first line of the address. For example, number or street. For example, 173 Drury Lane.
                 address_line_1: "123 Townsend St",
@@ -115,9 +116,7 @@ export default {
     },
     
     created() {
-        // this.$nextTick(function(){
-        //     paypal.Buttons().render('#paypal-button-container');
-        // })
+        
     }
 }
 </script>

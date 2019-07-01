@@ -66,6 +66,7 @@ export default {
     },
 
     async created(){
+        // Get item details from backend per product id
         await fetch('http://localhost:8080/api/product/' + this.id, {
             method: 'get',
             headers: {
